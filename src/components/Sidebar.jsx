@@ -4,7 +4,6 @@ import {
 	useTheme,
 	Box,
 	Typography,
-	Divider,
 	List,
 	ListSubheader,
 	ListItemButton,
@@ -20,32 +19,47 @@ function Sidebar() {
 	const colors = tokens(theme.palette.mode);
 
 	return (
-		<Box sx={{minHeight: '100vh', flex: 1, borderRight: `0.5px solid ${colors.primary[900]}`}}>
+		<Box
+			sx={{
+				minHeight: '100vh',
+				flex: 1,
+				borderRight: `0.5px solid ${colors.primary[900]}`
+			}}
+		>
 			<Box
 				sx={{
 					height: '50px',
+					p: '40px 0',
 					display: 'flex',
 					justifyContent: 'center',
 					alignItems: 'center'
 				}}
 			>
 				<Typography
-					variant='h4'
+					variant='h3'
 					component={Link}
 					to='/'
-					sx={{color: colors.grey[100], fontWeight: 'bold', textDecoration: 'none'}}
+					sx={{
+						color: colors.greenAccent[400],
+						fontWeight: 'bold',
+						textDecoration: 'none'
+					}}
 				>
-					LOGO
+					ADMIN
 				</Typography>
 			</Box>
 			<Box>
 				<List
 					component='nav'
-					subheader={<ListSubheader component='div'>MAIN</ListSubheader>}
-					sx={{m: '15px 0 5px 0', fontSize: '10px', fontWeight: 'bold'}}
+					subheader={
+						<ListSubheader component='div' sx={{fontSize: '15px'}}>
+							MAIN
+						</ListSubheader>
+					}
+					sx={{m: '15px 0 5px 0'}}
 				>
-					<ListItemButton component={Link} to='/'>
-						<ListItemIcon sx={{pl: '10px'}}>
+					<ListItemButton component={Link} to='/' sx={{color: colors.greenAccent[400]}}>
+						<ListItemIcon sx={{pl: '10px', color: colors.greenAccent[400]}}>
 							<Dashboard />
 						</ListItemIcon>
 						<ListItemText primary='Dashboard' />
@@ -53,29 +67,49 @@ function Sidebar() {
 				</List>
 				<List
 					component='nav'
-					subheader={<ListSubheader component='div'>LISTS</ListSubheader>}
-					sx={{m: '15px 0 5px 0', fontSize: '10px', fontWeight: 'bold'}}
+					subheader={
+						<ListSubheader component='div' sx={{fontSize: '15px'}}>
+							LISTS
+						</ListSubheader>
+					}
+					sx={{m: '15px 0 5px 0'}}
 				>
-					<ListItemButton component={Link} to='/users'>
-						<ListItemIcon sx={{pl: '10px'}}>
+					<ListItemButton
+						component={Link}
+						to='/users'
+						sx={{color: colors.greenAccent[400]}}
+					>
+						<ListItemIcon sx={{pl: '10px', color: colors.greenAccent[400]}}>
 							<PersonOutline />
 						</ListItemIcon>
 						<ListItemText primary='Users' />
 					</ListItemButton>
-					<ListItemButton component={Link} to='/products'>
-						<ListItemIcon sx={{pl: '10px'}}>
+					<ListItemButton
+						component={Link}
+						to='/products'
+						sx={{color: colors.greenAccent[400]}}
+					>
+						<ListItemIcon sx={{pl: '10px', color: colors.greenAccent[400]}}>
 							<Store />
 						</ListItemIcon>
 						<ListItemText primary='Products' />
 					</ListItemButton>
-					<ListItemButton component={Link} to='/orders'>
-						<ListItemIcon sx={{pl: '10px'}}>
+					<ListItemButton
+						component={Link}
+						to='/orders'
+						sx={{color: colors.greenAccent[400]}}
+					>
+						<ListItemIcon sx={{pl: '10px', color: colors.greenAccent[400]}}>
 							<CreditCard />
 						</ListItemIcon>
 						<ListItemText primary='Orders' />
 					</ListItemButton>
-					<ListItemButton component={Link} to='/delivery'>
-						<ListItemIcon sx={{pl: '10px'}}>
+					<ListItemButton
+						component={Link}
+						to='/delivery'
+						sx={{color: colors.greenAccent[400]}}
+					>
+						<ListItemIcon sx={{pl: '10px', color: colors.greenAccent[400]}}>
 							<LocalShipping />
 						</ListItemIcon>
 						<ListItemText primary='Delivery' />
