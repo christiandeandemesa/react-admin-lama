@@ -25,7 +25,7 @@ function Home() {
 			<Sidebar />
 			<Box sx={{flex: 6}}>
 				<Navbar />
-				<Divider />
+				<Divider sx={{backgroundColor: colors.grey[100]}} />
 				<Box sx={{p: '20px', display: 'flex', gap: '20px'}}>
 					<Widget
 						title='USERS'

@@ -24,7 +24,7 @@ function Sidebar() {
 			sx={{
 				minHeight: '100vh',
 				flex: 1,
-				borderRight: `0.5px solid ${colors.primary[900]}`
+				borderRight: `0.5px solid ${colors.grey[100]}`
 			}}
 		>
 			<Box

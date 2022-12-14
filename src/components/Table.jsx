@@ -1,6 +1,5 @@
-import {useTheme, Box, Typography} from '@mui/material';
+import {useTheme, Box} from '@mui/material';
 import {DataGrid, GridToolbar} from '@mui/x-data-grid';
-import {AdminPanelSettingsOutlined, LockOpenOutlined} from '@mui/icons-material';
 
 import {tokens} from '../theme';
 
