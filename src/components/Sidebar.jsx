@@ -97,31 +97,19 @@ function Sidebar() {
 						</ListItemIcon>
 						<ListItemText primary='Users' />
 					</ListItemButton>
-					<ListItemButton
-						component={Link}
-						to='/products'
-						sx={{color: colors.blueAccent[400]}}
-					>
+					<ListItemButton sx={{color: colors.blueAccent[400]}}>
 						<ListItemIcon sx={{pl: '10px', color: colors.blueAccent[400]}}>
 							<Store />
 						</ListItemIcon>
 						<ListItemText primary='Products' />
 					</ListItemButton>
-					<ListItemButton
-						component={Link}
-						to='/orders'
-						sx={{color: colors.blueAccent[400]}}
-					>
+					<ListItemButton sx={{color: colors.blueAccent[400]}}>
 						<ListItemIcon sx={{pl: '10px', color: colors.blueAccent[400]}}>
 							<CreditCard />
 						</ListItemIcon>
 						<ListItemText primary='Orders' />
 					</ListItemButton>
-					<ListItemButton
-						component={Link}
-						to='/delivery'
-						sx={{color: colors.blueAccent[400]}}
-					>
+					<ListItemButton sx={{color: colors.blueAccent[400]}}>
 						<ListItemIcon sx={{pl: '10px', color: colors.blueAccent[400]}}>
 							<LocalShipping />
 						</ListItemIcon>
