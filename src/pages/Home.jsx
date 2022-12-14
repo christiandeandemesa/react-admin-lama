@@ -1,4 +1,4 @@
-import {useTheme, Box, colors, Divider} from '@mui/material';
+import {useTheme, Box, Divider} from '@mui/material';
 import {
 	PersonOutlined,
 	ShoppingCartOutlined,
@@ -9,6 +9,8 @@ import {
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import Widget from '../components/Widget';
+import Featured from '../components/Featured';
+import Chart from '../components/Chart';
 
 import {tokens} from '../theme';
 
@@ -86,6 +88,10 @@ function Home() {
 							/>
 						}
 					/>
+				</Box>
+				<Box sx={{p: '5px 20px', display: 'flex', gap: '20px'}}>
+					<Featured />
+					<Chart />
 				</Box>
 			</Box>
 		</Box>
