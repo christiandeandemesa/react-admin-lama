@@ -1,4 +1,4 @@
-import {useTheme, Box, Divider} from '@mui/material';
+import {useTheme, Box, Divider, Typography} from '@mui/material';
 import {
 	PersonOutlined,
 	ShoppingCartOutlined,
@@ -11,12 +11,14 @@ import Navbar from '../components/Navbar';
 import Widget from '../components/Widget';
 import Featured from '../components/Featured';
 import Chart from '../components/Chart';
+import Table from '../components/Table';
 
 import {tokens} from '../theme';
 
 function Home() {
 	const theme = useTheme();
-	const colors = tokens(theme.palette.mode);
+	const mode = theme.palette.mode;
+	const colors = tokens(mode);
 
 	return (
 		<Box sx={{display: 'flex'}}>
@@ -92,6 +94,19 @@ function Home() {
 				<Box sx={{p: '5px 20px', display: 'flex', gap: '20px'}}>
 					<Featured />
 					<Chart />
+				</Box>
+				<Box
+					sx={{
+						m: '20px',
+						p: '20px',
+						backgroundColor: mode === 'dark' ? colors.primary[600] : '#EAEAEA',
+						boxShadow: `2px 4px 10px 1px ${colors.grey[400]}`
+					}}
+				>
+					<Typography variant='h2' sx={{mb: '15px', color: colors.grey[100]}}>
+						Latest Transactions
+					</Typography>
+					<Table />
 				</Box>
 			</Box>
 		</Box>
