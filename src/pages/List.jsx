@@ -134,7 +134,22 @@ function List() {
 			<Box sx={{flex: 6}}>
 				<Navbar />
 				<Divider />
-				<Box sx={{m: '20px'}}>
+				<Box sx={{m: '20px', display: 'flex', flexDirection: 'column'}}>
+					<Button
+						variant='outlined'
+						color='secondary'
+						component={Link}
+						to='/new'
+						sx={{
+							width: '80px',
+							p: '5px',
+							alignSelf: 'flex-end',
+							color: colors.greenAccent[400]
+						}}
+					>
+						Add New
+					</Button>
+
 					{/* MUI Table */}
 					<Box
 						sx={{

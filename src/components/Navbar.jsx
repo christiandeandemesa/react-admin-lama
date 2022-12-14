@@ -38,7 +38,7 @@ function Navbar() {
 					</Badge>
 				</IconButton>
 				<IconButton>
-					<Badge badgeContent={4} color='secondary'>
+					<Badge badgeContent={4} color='info'>
 						<ChatBubbleOutlineOutlined />
 					</Badge>
 				</IconButton>
